@@ -1,0 +1,17 @@
+<div>
+    <h2>Search Authors</h2>
+    <div>
+      <label for="id">Author Id:</label>
+      <input type="text" #authorQuery id="id">
+      <button (click)="submit(authorQuery.value)">Search</button>
+    </div>
+    <div *ngIf="author">
+      <h3>Author Details:</h3>
+      <p><strong>ID:</strong> {{ author.id }}</p>
+      <p><strong>Name:</strong> {{ author.name }}</p>
+      <p><strong>Biography:</strong> {{ author.biography }}</p>
+    </div>
+    <div *ngIf="message" class="message">
+      {{ message }}
+    </div>
+  </div>
